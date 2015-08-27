@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LiFab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+    <style name="AppBaseTheme" parent="BaseTheme.Light">
+        <item name="android:navigationBarColor">?attr/theme_color</item>
+
+        <item name="android:statusBarColor">?attr/theme_statusbar_color</item>
+        <!--Translucent system bars-->
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+</resources>

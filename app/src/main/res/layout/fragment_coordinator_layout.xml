@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.example.designsupportlibraryuseing.fragment.CoordinatorLayoutFragment">
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="与FAB"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="与Appbar"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="可以伸缩折叠的toolbar"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="高仿联系人详情"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="主题切换--标题要长-------------"/>
+    <com.example.designsupportlibraryuseing.widget.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        app:myText="0717"
+        app:myTextColor="#f0f"
+        app:myTextSize="30sp"/>
+    <com.example.designsupportlibraryuseing.widget.CustomImageView
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:image="@drawable/img_head"
+        app:imageScaleType="fillXY"
+        app:titleText="hello andorid ! "
+        app:titleTextColor="#ff0000"
+        app:titleTextSize="30sp"/>
+
+</LinearLayout>

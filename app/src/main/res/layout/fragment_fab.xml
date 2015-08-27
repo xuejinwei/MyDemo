@@ -1,0 +1,23 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/LiFab"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_done"
+        app:borderWidth="0dp"
+        app:elevation="6dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mini"
+        style="@style/LiFab"
+        android:layout_gravity="bottom|center"
+        android:src="@drawable/ic_done"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="mini"/>
+</FrameLayout>
