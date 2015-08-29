@@ -45,6 +45,10 @@
             android:name=".activity.SettingThemeActivity"
             android:label="@string/title_activity_setting_theme" >
         </activity>
+        <activity
+            android:name=".activity.OkHttpActivity"
+            android:label="@string/title_activity_ok_http" >
+        </activity>
     </application>
 
 </manifest>

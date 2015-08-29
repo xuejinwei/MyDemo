@@ -41,6 +41,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="主题切换--标题要长-------------"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="okHttp"/>
+
     <com.example.designsupportlibraryuseing.widget.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

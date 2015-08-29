@@ -11,13 +11,13 @@ public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
-        super.onCreate();
+
 
         _context = this;
 
         // 初始化ActivityHelper
         ActivityHelper.config(this);
-
+        super.onCreate();
     }
 
     public static MyApplication getInstance() {

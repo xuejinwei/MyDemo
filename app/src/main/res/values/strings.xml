@@ -48,4 +48,5 @@
         <item>Blue grey</item>
     </string-array>
     <string name="title_activity_coordinator_layout">CoordinatorLayoutActivity</string>
+    <string name="title_activity_ok_http">OkHttpActivity</string>
 </resources>

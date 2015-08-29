@@ -14,11 +14,12 @@ import com.example.designsupportlibraryuseing.activity.CollapsingContactActivity
 import com.example.designsupportlibraryuseing.activity.CollapsingToolbarActivity;
 import com.example.designsupportlibraryuseing.activity.CoorAndAppbarActivity;
 import com.example.designsupportlibraryuseing.activity.CoorAndFABActivity;
+import com.example.designsupportlibraryuseing.activity.OkHttpActivity;
 import com.example.designsupportlibraryuseing.activity.SettingThemeActivity;
 
 public class CoordinatorLayoutFragment extends Fragment implements View.OnClickListener {
 
-    private Button btn1, btn2, btn3, btn4, btn5;
+    private Button btn1, btn2, btn3, btn4, btn5,btn6;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -28,12 +29,15 @@ public class CoordinatorLayoutFragment extends Fragment implements View.OnClickL
         btn3 = (Button) view.findViewById(R.id.button3);
         btn4 = (Button) view.findViewById(R.id.button4);
         btn5 = (Button) view.findViewById(R.id.button5);
+        btn6 = (Button) view.findViewById(R.id.button6);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
+        btn6.setOnClickListener(this);
+
         return view;
     }
 
@@ -55,7 +59,9 @@ public class CoordinatorLayoutFragment extends Fragment implements View.OnClickL
             case R.id.button5:
                 startActivity(new Intent(getActivity(), SettingThemeActivity.class));
                 break;
-
+            case R.id.button6:
+                startActivity(new Intent(getActivity(), OkHttpActivity.class));
+                break;
             default:
         }
     }
