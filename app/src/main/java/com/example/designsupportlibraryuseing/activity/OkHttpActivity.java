@@ -19,6 +19,8 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
 import java.io.IOException;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -50,11 +52,15 @@ public class OkHttpActivity extends BaseActivity {
 
                 String url = "http://m.baidu.com";
                 // 创建 OKHTTP 对象
-                final OkHttpClient mOkHttpClient = new OkHttpClient();
+                OkHttpClient mOkHttpClient = new OkHttpClient();
+                mOkHttpClient.setConnectTimeout(10, TimeUnit.SECONDS);
+                mOkHttpClient.setWriteTimeout(10, TimeUnit.SECONDS);
+                mOkHttpClient.setReadTimeout(30, TimeUnit.SECONDS);
                 // 创建request
-                final Request mRequest = new Request.Builder().url(url).build();
+                Request mRequest = new Request.Builder().url(url).build();
                 // new call
                 Call mCall = mOkHttpClient.newCall(mRequest);
+
                 mCall.enqueue(new Callback() {
                     @Override
                     public void onFailure(Request request, IOException e) {
@@ -72,6 +78,14 @@ public class OkHttpActivity extends BaseActivity {
             }
         });
 
+    }
+
+    static class Gist {
+        Map<String, GistFile> files;
+    }
+
+    static class GistFile {
+        String content;
     }
 
     @Override
