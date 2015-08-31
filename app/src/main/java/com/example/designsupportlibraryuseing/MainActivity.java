@@ -81,6 +81,9 @@ public class MainActivity extends BaseActivity {
                         return true;
                     }
                 });
+
+
+        
     }
 
     static class Adapter extends FragmentPagerAdapter {
