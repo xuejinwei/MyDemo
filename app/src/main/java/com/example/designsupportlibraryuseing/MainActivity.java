@@ -83,7 +83,7 @@ public class MainActivity extends BaseActivity {
                 });
 
 
-        
+
     }
 
     static class Adapter extends FragmentPagerAdapter {
@@ -97,6 +97,7 @@ public class MainActivity extends BaseActivity {
         public void addFragment(Fragment fragment, String title) {
             mFragments.add(fragment);
             mFragmentTitles.add(title);
+            
         }
 
         @Override
