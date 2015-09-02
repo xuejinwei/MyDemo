@@ -28,6 +28,8 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout mDrawerLayout;
 
 
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
