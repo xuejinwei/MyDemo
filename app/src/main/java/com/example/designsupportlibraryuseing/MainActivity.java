@@ -19,6 +19,9 @@ import com.example.designsupportlibraryuseing.fragment.CoordinatorLayoutFragment
 import com.example.designsupportlibraryuseing.fragment.FABFragment;
 import com.example.designsupportlibraryuseing.fragment.SnackBarFragment;
 import com.example.designsupportlibraryuseing.fragment.TextInputLayoutFragment;
+import com.example.designsupportlibraryuseing.otto.BusProvider;
+import com.example.designsupportlibraryuseing.otto.ToolbarChangeEvent;
+import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,15 +29,20 @@ import java.util.List;
 public class MainActivity extends BaseActivity {
 
     private DrawerLayout mDrawerLayout;
+    private Toolbar toolbar;
 
 
-    
+    @Subscribe
+    public void onToolbarChange(ToolbarChangeEvent event) {
+        toolbar.setTitle(event.toString());
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         final ActionBar ab = getSupportActionBar();
@@ -62,6 +70,7 @@ public class MainActivity extends BaseActivity {
         tableLayout.setupWithViewPager(viewPager);
 
     }
+
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
         adapter.addFragment(new CoordinatorLayoutFragment(), "CoordinatorLayout");
@@ -85,7 +94,6 @@ public class MainActivity extends BaseActivity {
                 });
 
 
-
     }
 
     static class Adapter extends FragmentPagerAdapter {
@@ -99,7 +107,7 @@ public class MainActivity extends BaseActivity {
         public void addFragment(Fragment fragment, String title) {
             mFragments.add(fragment);
             mFragmentTitles.add(title);
-            
+
         }
 
         @Override
@@ -139,5 +147,21 @@ public class MainActivity extends BaseActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Register ourselves so that we can provide the initial value.
+        BusProvider.getInstance().register(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Always unregister when an object no longer should be on the bus.
+        BusProvider.getInstance().unregister(this);
     }
 }

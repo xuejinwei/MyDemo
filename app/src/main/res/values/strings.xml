@@ -49,4 +49,5 @@
     </string-array>
     <string name="title_activity_coordinator_layout">CoordinatorLayoutActivity</string>
     <string name="title_activity_ok_http">OkHttpActivity</string>
+    <string name="title_activity_otto">OttoActivity</string>
 </resources>

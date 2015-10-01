@@ -3,6 +3,12 @@
     package="com.example.designsupportlibraryuseing" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
 
     <intent-filter android:priority="0" >
         <action android:name="android.intent.action.VIEW" />
@@ -48,6 +54,10 @@
         <activity
             android:name=".activity.OkHttpActivity"
             android:label="@string/title_activity_ok_http" >
+        </activity>
+        <activity
+            android:name=".otto.OttoActivity"
+            android:label="@string/title_activity_otto" >
         </activity>
     </application>
 
