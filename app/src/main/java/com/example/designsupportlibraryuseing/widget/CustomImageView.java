@@ -98,7 +98,7 @@ public class CustomImageView extends View {
                 case R.styleable.CustomImageView_titleText:
                     mTitle = a.getString(attr);
                     break;
-                case R.styleable.CustomImageView_titleTextColor:
+                case R.styleable.CustomImageView_titleTextColor01:
                     mTextColor = a.getColor(attr, Color.BLACK);
                     break;
                 case R.styleable.CustomImageView_titleTextSize:

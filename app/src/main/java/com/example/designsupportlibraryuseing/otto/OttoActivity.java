@@ -33,7 +33,7 @@ public class OttoActivity extends AppCompatActivity {
                 // Post new location event for the default location.
                 lastLatitude = DEFAULT_LAT;
                 lastLongitude = DEFAULT_LON;
-                BusProvider.getInstance().post(new LocationChangedEvent(lastLatitude,lastLongitude));
+                BusProvider.getInstance().post(new LocationChangedEvent(lastLatitude, lastLongitude));
             }
         });
 
@@ -42,12 +42,13 @@ public class OttoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 lastLatitude += (RANDOM.nextInt() * OFFSET * 2) - OFFSET;
                 lastLongitude += (RANDOM.nextInt() * OFFSET * 2) - OFFSET;
-                BusProvider.getInstance().post(new LocationChangedEvent(lastLatitude,lastLongitude));
+                BusProvider.getInstance().post(new LocationChangedEvent(lastLatitude, lastLongitude));
 
             }
         });
     }
 
+    // TODO: 15/10/1  如果 使用produce,默认初始化时候会执行一次
     @Produce
     public LocationChangedEvent produceLocationEvent() {
         // Provide an initial value for location based on the last known position.

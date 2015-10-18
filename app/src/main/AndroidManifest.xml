@@ -59,6 +59,8 @@
             android:name=".otto.OttoActivity"
             android:label="@string/title_activity_otto" >
         </activity>
+        <activity android:name=".activity.Main2Activity" >
+        </activity>
     </application>
 
 </manifest>
