@@ -23,6 +23,8 @@ import com.squareup.otto.Produce;
 public class CoordinatorLayoutFragment extends Fragment implements View.OnClickListener {
 
     private Button btn1, btn2, btn3, btn4, btn5, btn6;
+
+
     private int i = 1;
 
     @Override
