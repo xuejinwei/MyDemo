@@ -102,6 +102,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="button"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="button"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="button"/>
             <com.example.designsupportlibraryuseing.systemCodeEdit.ScrollableListView
                 android:id="@+id/listview"
                 android:layout_width="match_parent"
