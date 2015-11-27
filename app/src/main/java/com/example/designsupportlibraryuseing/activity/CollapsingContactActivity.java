@@ -1,13 +1,16 @@
 package com.example.designsupportlibraryuseing.activity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -25,6 +28,7 @@ public class CollapsingContactActivity extends BaseActivity {
         setContentView(R.layout.activity_collapsing_contact);
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Button btn = (Button) findViewById(R.id.btn_01);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -47,6 +51,36 @@ public class CollapsingContactActivity extends BaseActivity {
             }
         });
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(CollapsingContactActivity.this);
+                builder.setTitle("请选择性别");
+                final String[] sex = {"男", "女", "未知性别"};
+                builder.setSingleChoiceItems(sex, 1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(CollapsingContactActivity.this, "性别为：" + sex[which], Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                });
+
+
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.create().show();
+            }
+        });
     }
 
 

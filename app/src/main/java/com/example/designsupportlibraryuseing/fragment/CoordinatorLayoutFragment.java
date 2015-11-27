@@ -2,12 +2,18 @@ package com.example.designsupportlibraryuseing.fragment;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.designsupportlibraryuseing.R;
 import com.example.designsupportlibraryuseing.activity.CollapsingContactActivity;
@@ -23,6 +29,7 @@ import com.squareup.otto.Produce;
 public class CoordinatorLayoutFragment extends Fragment implements View.OnClickListener {
 
     private Button btn1, btn2, btn3, btn4, btn5, btn6;
+    private TextView tv_span;
 
 
     private int i = 1;
@@ -36,6 +43,24 @@ public class CoordinatorLayoutFragment extends Fragment implements View.OnClickL
         btn4 = (Button) view.findViewById(R.id.button4);
         btn5 = (Button) view.findViewById(R.id.button5);
         btn6 = (Button) view.findViewById(R.id.button6);
+        tv_span = (TextView) view.findViewById(R.id.tv_span);
+
+        String str = "这是设置TextView部分文字背景颜色和前景颜色的demo!";
+        int bstart = str.indexOf("背景");
+        int bend = bstart + "背景".length();
+
+
+        int fstart = str.indexOf("前景");
+        int fend = fstart + "前景".length();
+        SpannableStringBuilder style = new SpannableStringBuilder(str);
+
+        style.setSpan(new BackgroundColorSpan(Color.RED), bstart, bend, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+
+        style.setSpan(new ForegroundColorSpan(Color.RED), fstart, fend, Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+
+        tv_span.setText(style);
+
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
