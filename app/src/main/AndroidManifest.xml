@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.designsupportlibraryuseing" >
+<manifest package="com.example.designsupportlibraryuseing"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_SMS" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SEND_SMS">
     </uses-permission>
-    <uses-permission android:name="android.permission.READ_SMS" >
+    <uses-permission android:name="android.permission.READ_SMS">
     </uses-permission>
-    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    <uses-permission android:name="android.permission.RECEIVE_SMS">
     </uses-permission>
 
-    <intent-filter android:priority="0" >
-        <action android:name="android.intent.action.VIEW" />
+    <intent-filter android:priority="0">
+        <action android:name="android.intent.action.VIEW"/>
 
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
 
-        <data android:scheme="geo" />
+        <data android:scheme="geo"/>
     </intent-filter>
 
     <application
@@ -24,42 +24,44 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".activity.CoorAndFABActivity"
-            android:label="@string/title_activity_coor_and_fab" />
+            android:label="@string/title_activity_coor_and_fab"/>
         <activity
             android:name=".activity.CoorAndAppbarActivity"
-            android:label="@string/title_activity_coor_and_appbar" />
+            android:label="@string/title_activity_coor_and_appbar"/>
         <activity
             android:name=".activity.CollapsingToolbarActivity"
-            android:label="@string/title_activity_collapsing_toolbar" />
+            android:label="@string/title_activity_collapsing_toolbar"/>
         <activity
             android:name=".activity.CollapsingContactActivity"
             android:label="@string/title_activity_collapsing_contact"
-            android:theme="@style/AppTheme.StatusBar" />
+            android:theme="@style/AppTheme.StatusBar"/>
         <activity
             android:name=".activity.SettingThemeActivity"
-            android:label="@string/title_activity_setting_theme" >
+            android:label="@string/title_activity_setting_theme">
         </activity>
         <activity
             android:name=".activity.OkHttpActivity"
-            android:label="@string/title_activity_ok_http" >
+            android:label="@string/title_activity_ok_http">
         </activity>
         <activity
             android:name=".otto.OttoActivity"
-            android:label="@string/title_activity_otto" >
+            android:label="@string/title_activity_otto">
         </activity>
-        <activity android:name=".activity.Main2Activity" >
+        <activity android:name=".activity.Main2Activity">
+        </activity>
+        <activity android:name=".activity.TabBarActivity">
         </activity>
     </application>
 
