@@ -21,6 +21,7 @@ import com.example.designsupportlibraryuseing.activity.CollapsingToolbarActivity
 import com.example.designsupportlibraryuseing.activity.Main2Activity;
 import com.example.designsupportlibraryuseing.activity.OkHttpActivity;
 import com.example.designsupportlibraryuseing.activity.SettingThemeActivity;
+import com.example.designsupportlibraryuseing.activity.TabBarActivity;
 import com.example.designsupportlibraryuseing.otto.BusProvider;
 import com.example.designsupportlibraryuseing.otto.OttoActivity;
 import com.example.designsupportlibraryuseing.otto.ToolbarChangeEvent;
@@ -28,7 +29,7 @@ import com.squareup.otto.Produce;
 
 public class CoordinatorLayoutFragment extends Fragment implements View.OnClickListener {
 
-    private Button btn1, btn2, btn3, btn4, btn5, btn6;
+    private Button btn1, btn2, btn3, btn4, btn5, btn6,btn7;
     private TextView tv_span;
 
 
@@ -43,6 +44,7 @@ public class CoordinatorLayoutFragment extends Fragment implements View.OnClickL
         btn4 = (Button) view.findViewById(R.id.button4);
         btn5 = (Button) view.findViewById(R.id.button5);
         btn6 = (Button) view.findViewById(R.id.button6);
+        btn7 = (Button) view.findViewById(R.id.button7);
         tv_span = (TextView) view.findViewById(R.id.tv_span);
 
         String str = "这是设置TextView部分文字背景颜色和前景颜色的demo!";
@@ -68,7 +70,7 @@ public class CoordinatorLayoutFragment extends Fragment implements View.OnClickL
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
-
+        btn7.setOnClickListener(this);
         return view;
     }
 
@@ -112,6 +114,9 @@ public class CoordinatorLayoutFragment extends Fragment implements View.OnClickL
                 break;
             case R.id.button6:
                 startActivity(new Intent(getActivity(), OkHttpActivity.class));
+                break;
+            case R.id.button7:
+                startActivity(new Intent(getActivity(), TabBarActivity.class));
                 break;
             default:
         }
