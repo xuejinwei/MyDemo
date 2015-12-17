@@ -67,6 +67,14 @@
         app:myText="0717"
         app:myTextColor="#f0f"
         app:myTextSize="30sp"/>
+    <com.example.designsupportlibraryuseing.widget.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        app:myText="0717"
+        app:myTextColor="#f0f"
+        app:myTextSize="30sp"/>
 
     <com.example.designsupportlibraryuseing.widget.CustomImageView
         android:layout_width="100dp"
