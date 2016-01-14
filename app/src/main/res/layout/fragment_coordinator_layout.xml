@@ -68,13 +68,4 @@
         app:myTextColor="#f0f"
         app:myTextSize="30sp"/>
 
-    <com.example.designsupportlibraryuseing.widget.CustomImageView
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        app:image="@drawable/img_head"
-        app:imageScaleType="fillXY"
-        app:titleText="hello andorid ! "
-        app:titleTextColor="#ff0000"
-        app:titleTextSize="30sp"/>
-
 </LinearLayout>
